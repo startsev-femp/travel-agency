@@ -1,0 +1,93 @@
+<!-- Сайт розроблено студентом Старцевим Андрієм Денисовичем, група ФЕМП 3-13 -->
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тури - Мандрівник</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">🌍 Мандрівник</div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="tours.html" class="active">Тури</a></li>
+                    <li><a href="about.html">Про нас</a></li>
+                    <li><a href="contact.html">Контакти</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Наші тури</h1>
+            <p>Оберіть свою ідеальну подорож</p>
+        </div>
+    </section>
+
+    <section class="tours-section">
+        <div class="container">
+            <div class="tours-grid" id="toursContainer">
+                <!-- Тури будуть додані через JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальне вікно бронювання -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Бронювання туру</h2>
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="tourName">Обраний тур:</label>
+                    <input type="text" id="tourName" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="startDate">Дата початку:</label>
+                    <input type="date" id="startDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="adults">Кількість дорослих:</label>
+                    <input type="number" id="adults" min="1" max="10" value="2" required>
+                </div>
+                <div class="form-group">
+                    <label for="children">Кількість дітей:</label>
+                    <input type="number" id="children" min="0" max="10" value="0">
+                </div>
+                <div class="form-group">
+                    <label for="name">Ваше ім'я:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Телефон:</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="total-price">
+                    <h3>Загальна вартість: <span id="totalPrice">0</span> грн</h3>
+                    <p class="price-details" id="priceDetails"></p>
+                </div>
+                <button type="submit" class="btn btn-primary">Підтвердити бронювання</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Мандрівник - Туристична агенція</p>
+            <p>Розроблено: <strong>Старцев Андрій Денисович</strong>, група <strong>ФЕМП 3-13</strong></p>
+            <p>Email: <strong>a.startsev_femp_13_23_b_d@knute.edu.ua</strong></p>
+        </div>
+    </footer>
+
+    <script src="tours.js"></script>
+</body>
+</html>

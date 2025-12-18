@@ -1,0 +1,670 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #1a1a1a;
+  /* яскравий градієнтний фон */
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Яскрава навігація з градієнтом */
+header {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  box-shadow: 0 4px 20px rgba(245, 87, 108, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  padding: 1.2rem 0;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+}
+
+.nav-menu a {
+  color: rgba(255, 255, 255, 0.95);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  color: #ffffff;
+  transform: translateY(-2px);
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Hero секція з яскравим градієнтним фоном та зображенням міста */
+.hero {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9)),
+    url("/placeholder.svg?height=800&width=1600") center / cover;
+  color: white;
+  padding: 160px 20px 140px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, transparent 0%, rgba(102, 126, 234, 0.3) 100%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.hero-content p {
+  font-size: 1.4rem;
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.95;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Яскраві кнопки з градієнтом */
+.btn {
+  display: inline-block;
+  padding: 14px 40px;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(245, 87, 108, 0.6);
+  background: linear-gradient(135deg, #f5576c 0%, #f093fb 100%);
+}
+
+/* Яскрава features секція */
+.features {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+.features h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 4rem;
+  color: #333;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+}
+
+/* Яскраві картки з градієнтами */
+.feature-card {
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  text-align: center;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 30px rgba(252, 182, 159, 0.3);
+}
+
+.feature-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(252, 182, 159, 0.5);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.feature-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.feature-card h3 {
+  color: #333;
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+
+.feature-card p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Page Header з яскравим градієнтом та фоном */
+.page-header {
+  background: linear-gradient(135deg, rgba(240, 147, 251, 0.9), rgba(245, 87, 108, 0.9)),
+    url("/placeholder.svg?height=400&width=1600") center / cover;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(245, 87, 108, 0.3);
+}
+
+.page-header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.page-header p {
+  font-size: 1.2rem;
+  opacity: 0.95;
+  font-weight: 300;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Яскрава tours секція */
+.tours-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+}
+
+.tours-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 2.5rem;
+}
+
+/* Яскраві тур-картки з градієнтами */
+.tour-card {
+  background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(252, 182, 159, 0.4);
+  transition: all 0.4s ease;
+  border: 3px solid rgba(240, 147, 251, 0.3);
+}
+
+.tour-card:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(245, 87, 108, 0.5);
+  border-color: rgba(245, 87, 108, 0.6);
+}
+
+.tour-image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.tour-card:hover .tour-image {
+  transform: scale(1.08);
+}
+
+.tour-content {
+  padding: 2rem;
+}
+
+.tour-content h3 {
+  color: #333;
+  margin-bottom: 0.8rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.tour-duration {
+  color: #f5576c;
+  margin-bottom: 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tour-content p {
+  color: #555;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.tour-features {
+  margin: 1.5rem 0;
+}
+
+.tour-features ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tour-features li {
+  padding: 0.5rem 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.tour-features li:before {
+  content: "✓ ";
+  color: #f5576c;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.tour-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid rgba(245, 87, 108, 0.2);
+}
+
+.tour-price {
+  font-size: 2rem;
+  color: #f5576c;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.price-label {
+  font-size: 0.85rem;
+  color: #888;
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Модальне вікно */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(102, 126, 234, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+/* Яскраве модальне вікно */
+.modal-content {
+  background: linear-gradient(135deg, #ffffff 0%, #ffecd2 100%);
+  margin: 3% auto;
+  padding: 3rem;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 650px;
+  box-shadow: 0 20px 80px rgba(245, 87, 108, 0.5);
+  border: 3px solid rgba(240, 147, 251, 0.5);
+}
+
+.modal-content h2 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.close {
+  color: #f5576c;
+  float: right;
+  font-size: 32px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  line-height: 1;
+}
+
+.close:hover {
+  color: #f093fb;
+  transform: rotate(90deg);
+}
+
+.form-group {
+  margin-bottom: 1.8rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.7rem;
+  color: #333;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid rgba(245, 87, 108, 0.3);
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #f5576c;
+  background-color: white;
+  box-shadow: 0 0 20px rgba(245, 87, 108, 0.2);
+}
+
+/* Яскравий блок з ціною */
+.total-price {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  padding: 2rem;
+  border-radius: 15px;
+  margin: 2rem 0;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(245, 87, 108, 0.4);
+  color: white;
+}
+
+.total-price h3 {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.total-price span {
+  color: white;
+}
+
+.price-details {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  margin-top: 0.8rem;
+  line-height: 1.6;
+}
+
+/* Яскрава about секція */
+.about-content {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+.about-text {
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.about-text h2 {
+  color: #333;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.about-text h3 {
+  color: #f5576c;
+  margin-top: 2.5rem;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+
+.about-text p {
+  margin-bottom: 1.2rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.about-text ul {
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+}
+
+.about-text li {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+/* Яскраві статистичні картки */
+.stat-item {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  border-radius: 20px;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 30px rgba(245, 87, 108, 0.4);
+}
+
+.stat-item:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 20px 50px rgba(245, 87, 108, 0.6);
+}
+
+.stat-number {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: -1px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.stat-label {
+  font-size: 1rem;
+  font-weight: 300;
+  opacity: 0.95;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Яскрава контактна секція */
+.contact-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 4rem;
+}
+
+.contact-info h2,
+.contact-form-container h2 {
+  color: #333;
+  margin-bottom: 2.5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.contact-item {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 1.5rem;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateX(5px);
+}
+
+.contact-icon {
+  font-size: 2.2rem;
+  opacity: 0.9;
+}
+
+.contact-item h3 {
+  color: #333;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+
+.contact-item p {
+  color: #555;
+  margin: 0.3rem 0;
+  line-height: 1.6;
+}
+
+.contact-form {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  border: 3px solid rgba(240, 147, 251, 0.3);
+}
+
+/* Яскравий footer з градієнтом */
+footer {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: rgba(255, 255, 255, 0.95);
+  text-align: center;
+  padding: 3rem 0;
+  margin-top: 0;
+  box-shadow: 0 -10px 40px rgba(102, 126, 234, 0.3);
+}
+
+footer p {
+  margin: 0.7rem 0;
+  font-size: 0.95rem;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+footer strong {
+  font-weight: 600;
+  color: white;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .features h2 {
+    font-size: 2rem;
+  }
+
+  .page-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .tours-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-content {
+    width: 95%;
+    margin: 10% auto;
+    padding: 2rem;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+}

@@ -1,0 +1,110 @@
+<!-- Сайт розроблено студентом Старцевим Андрієм Денисовичем, група ФЕМП 3-13 -->
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти - Мандрівник</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">🌍 Мандрівник</div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="tours.html">Тури</a></li>
+                    <li><a href="about.html">Про нас</a></li>
+                    <li><a href="contact.html" class="active">Контакти</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Контакти</h1>
+            <p>Зв'яжіться з нами будь-яким зручним способом</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Наші контакти</h2>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h3>Адреса</h3>
+                            <p>м. Київ, вул. Хрещатик, 1</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h3>Телефон</h3>
+                            <p>+380 (44) 123-45-67</p>
+                            <p>+380 (67) 890-12-34</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>a.startsev_femp_13_23_b_d@knute.edu.ua</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">🕐</div>
+                        <div>
+                            <h3>Графік роботи</h3>
+                            <p>Пн-Пт: 9:00 - 18:00</p>
+                            <p>Сб: 10:00 - 15:00</p>
+                            <p>Нд: вихідний</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <h2>Напишіть нам</h2>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="contactName">Ваше ім'я:</label>
+                            <input type="text" id="contactName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email:</label>
+                            <input type="email" id="contactEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactPhone">Телефон:</label>
+                            <input type="tel" id="contactPhone">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Повідомлення:</label>
+                            <textarea id="contactMessage" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Надіслати</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Мандрівник - Туристична агенція</p>
+            <p>Розроблено: <strong>Старцев Андрій Денисович</strong>, група <strong>ФЕМП 3-13</strong></p>
+            <p>Email: <strong>a.startsev_femp_13_23_b_d@knute.edu.ua</strong></p>
+        </div>
+    </footer>
+
+    <script src="contact.js"></script>
+</body>
+</html>
